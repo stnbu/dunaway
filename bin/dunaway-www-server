@@ -1,0 +1,4 @@
+#!/usr/bin/env python
+
+import dunaway.www
+dunaway.www.cli_www_server()

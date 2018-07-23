@@ -1,0 +1,3 @@
+include README
+recursive-include dunaway/resources *
+recursive-include docs *

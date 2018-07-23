@@ -1,0 +1,14 @@
+{
+    "aa:aa:aa:aa:aa:aa": {
+	"iso_path": "install.iso",
+	"ip_address": "192.168.1.3",
+        "netmask": "255.255.255.0",
+        "gateway": "192.168.1.1",
+        "hostname": "host-01",
+        "nameserver": "10.0.0.1",
+        "root_password": "password",
+	"oob_ip_address": "192.168.7.7",
+	"oob_username": "user",
+	"oob_password": "password",
+    }
+}

@@ -1,0 +1,15 @@
+[Unit]
+Description=dunaway
+After=network.target
+
+[Service]
+Type=simple
+User=dunaway
+ExecStart=/usr/bin/dunaway-www-server
+KillSignal=SIGQUIT
+TimeoutStopSec=5
+KillMode=mixed
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

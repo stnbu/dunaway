@@ -1,0 +1,25 @@
+interface={pxe_internal_if}
+bind-interfaces
+domain={pxe_dhcp_domain}
+
+# DHCP range-leases
+dhcp-range={pxe_internal_if},{pxe_dhcp_network_ip},static
+# PXE
+dhcp-boot=pxelinux.0,pxeserver,{pxe_internal_ip}
+# Gateway
+dhcp-option=3,{pxe_dhcp_gateway}
+# DNS
+dhcp-option=6,{pxe_dhcp_nameserver_list}
+# Broadcast Address
+dhcp-option=28,{pxe_dhcp_broadcast}
+# NTP Server
+dhcp-option=42,{pxe_dhcp_ntp}
+pxe-prompt="pxe boot...", 0
+pxe-service=x86PC,"PXE boot service",pxelinux
+enable-tftp
+tftp-root={pxe_tftp_root}
+
+log-queries
+log-dhcp
+
+conf-dir={pxe_dhcp_conf_dir}

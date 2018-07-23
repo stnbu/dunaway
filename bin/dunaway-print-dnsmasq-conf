@@ -1,0 +1,4 @@
+#!/usr/bin/env python
+
+import dunaway.util
+dunaway.util.cli_print_dnsmasq_conf()
